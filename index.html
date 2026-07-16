@@ -22,7 +22,7 @@ layout: default
             <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ w.image }}" class="image">
                 <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ w.image }}" alt="{{ w.title_ko }} {{ w.title_en }}"/></a>
             <h2>{{ w.title_ko }} <span class="en">{{ w.title_en }}</span></h2>
-            <p>{{ w.material_ko }} · {{ w.dimensions }} · {{ w.year }}</p>
+            <p>{{ w.material_ko }}{% if w.dimensions %} · {{ w.dimensions }}{% endif %}{% if w.year %} · {{ w.year }}{% endif %}</p>
         </article>
         {% endfor %}
     </div>
@@ -40,12 +40,35 @@ layout: default
                     <p>{{ site.artist.bio_ko }}</p>
                     <p>{{ site.artist.bio_en }}</p>
                 </section>
+                <section>
+                    <h2>작가의 세계 · The Artist's World</h2>
+                    <p>{{ site.artist.statement_ko }}</p>
+                    <p class="en-block">{{ site.artist.statement_en }}</p>
+                </section>
             </div>
             <div>
                 <section>
-                    <h2>약력 · Career</h2>
+                    <h2>학력 · Education</h2>
                     <ul class="alt">
-                        {% for item in site.artist.career %}<li>{{ item }}</li>{% endfor %}
+                        {% for item in site.artist.education %}<li>{{ item }}</li>{% endfor %}
+                    </ul>
+                </section>
+                <section>
+                    <h2>활동 · Activities</h2>
+                    <ul class="alt">
+                        {% for item in site.artist.activities %}<li>{{ item }}</li>{% endfor %}
+                    </ul>
+                </section>
+                <section>
+                    <h2>수상 · Awards</h2>
+                    <ul class="alt">
+                        {% for item in site.artist.awards %}<li>{{ item }}</li>{% endfor %}
+                    </ul>
+                </section>
+                <section>
+                    <h2>주요 전시 · Selected Exhibitions</h2>
+                    <ul class="alt">
+                        {% for item in site.artist.exhibitions %}<li>{{ item }}</li>{% endfor %}
                     </ul>
                 </section>
                 <section>

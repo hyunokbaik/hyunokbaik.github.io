@@ -13,3 +13,5 @@ body,input,select,textarea,#header h1,.thumb>h2,#footer,h1,h2,h3{font-family:"No
 .artist-portrait{margin:0 0 1.4em;max-width:320px}
 .artist-portrait img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 6px 24px rgba(0,0,0,.45)}
 @media screen and (max-width:736px){.artist-portrait{max-width:240px;margin-left:auto;margin-right:auto}}
+#footer .en-block{opacity:.72;font-size:.92em;font-weight:300}
+#footer section{margin-bottom:1.6em}
