@@ -1,0 +1,58 @@
+---
+layout: default
+permalink: /archive/
+---
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="{{ site.baseurl }}/"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ site.baseurl }}/">대표작 · Highlights&nbsp;&nbsp;<i class="fa fa-star text-fg"></i></a></li>
+                <li><a href="{{ site.baseurl }}/#footer">About&nbsp;&nbsp;<i class="fa fa-info-circle text-fg"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Intro line -->
+    {% assign n_main = site.data.works | size %}
+    {% assign n_arch = site.data.archive | size %}
+    {% assign n_total = n_main | plus: n_arch %}
+    <div class="archive-intro">
+        <p>전체 작품 아카이브 · Complete Archive — 총 {{ n_total }}점. 대표작과 그 밖의 작품·공공조각을 모았습니다.</p>
+    </div>
+
+    <!-- Main: full archive gallery (highlights first, then the rest) -->
+    <div id="main">
+        {% for w in site.data.works %}
+        <article class="thumb">
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ w.image }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ w.image }}" alt="{{ w.title_ko }} {{ w.title_en }}"/></a>
+            <h2>{{ w.title_ko }} <span class="en">{{ w.title_en }}</span></h2>
+            <p>{{ w.material_ko }}{% if w.dimensions %} · {{ w.dimensions }}{% endif %}{% if w.year %} · {{ w.year }}{% endif %}</p>
+        </article>
+        {% endfor %}
+        {% for w in site.data.archive %}
+        <article class="thumb">
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ w.image }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ w.image }}" alt="{{ w.title_ko }} {{ w.title_en }}"/></a>
+            <h2>{{ w.title_ko }} <span class="en">{{ w.title_en }}</span></h2>
+            {% assign meta_line = w.meta %}{% if w.material_ko %}{% assign meta_line = w.material_ko %}{% if w.year %}{% assign meta_line = meta_line | append: ' · ' | append: w.year %}{% endif %}{% endif %}
+            {% if meta_line %}<p>{{ meta_line }}</p>{% endif %}
+        </article>
+        {% endfor %}
+    </div>
+
+    <!-- Minimal footer -->
+    <footer id="footer" class="panel">
+        <div class="inner">
+            <p><a href="{{ site.baseurl }}/">← 대표작 갤러리로 돌아가기 · Back to highlights</a></p>
+            <p class="copyright">
+                &copy; {{ site.time | date: '%Y' }} {{ site.artist.name_ko }} ({{ site.artist.name_en }}). In loving memory.
+            </p>
+        </div>
+    </footer>
+</div>
