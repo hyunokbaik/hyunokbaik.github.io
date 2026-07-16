@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect x="0" y="0" width="512" height="512" rx="104" fill="#242629"/>
+  <text x="256" y="252" font-family="Songti SC, Songti TC, AppleMyungjo, serif" font-size="340" font-weight="900" fill="#f4f1ea" text-anchor="middle" dominant-baseline="central">白</text>
+  <rect x="196" y="438" width="120" height="14" rx="7" fill="#34a58e"/>
+</svg>
