@@ -1,0 +1,32 @@
+# ===== Base =====
+baseurl: ""            # user site at root. (로컬 테스트도 "" 그대로면 됩니다)
+image_fulls_loc: "/images/fulls"
+image_thumbs_loc: "/images/thumbs"
+
+# ===== Header (상단 제목) =====
+title: "백현옥 조각 · Baik Hyun-ok Sculpture"
+header:
+  title: "백현옥"
+  subtitle: "白顯鈺 · Baik Hyun-ok"
+
+# ===== Artist / 약력 (About 섹션) =====
+artist:
+  name_ko: "백현옥"
+  name_en: "Baik Hyun-ok (白顯鈺)"
+  years: "1939 – 2024"
+  role_ko: "조각가 · 인하대학교 명예교수 · Sculptor"
+  bio_ko: "백현옥(白顯鈺, 1939–2024)은 한국 구상조각을 대표하는 조각가이다. 충청남도 장항에서 태어나 서울대학교 미술대학 조소과(1965)와 한양대학교 교육대학원(석사)을 졸업하였다. 1981년부터 2004년까지 인하대학교 사범대학 미술교육과 교수로 재직하였고 이후 명예교수로 활동하였다. 1960년대의 추상적 모더니즘에서 1970년대 이후 구상과 표현주의로 나아가며, 빛과 어둠·수직과 수평·정중동의 균형을 인체와 자연의 형상에 담아 조화와 공존을 탐구하였다."
+  bio_en: "Baik Hyun-ok (1939–2024) was a leading figure in Korean figurative sculpture. Born in Janghang, he graduated from the College of Fine Arts, Seoul National University (Sculpture, 1965) and earned a master's degree from Hanyang University. He served as professor at Inha University (1981–2004) and later professor emeritus. Moving from the abstract modernism of the 1960s toward figuration and expressionism, his work explores harmony and coexistence through the human figure and natural forms — balancing light and shadow, the vertical and the horizontal, stillness and motion."
+  career:
+    - "1965 서울대학교 미술대학 조소과 졸업 · B.F.A., Seoul National University"
+    - "1985 한양대학교 교육대학원 졸업 (석사) · M.A., Hanyang University"
+    - "1981–2004 인하대학교 사범대학 미술교육과 교수 · 이후 명예교수"
+    - "한국미술협회 부이사장 · 서울조각회 회장"
+    - "대한민국미술대전 추천작가"
+    - "국전 문화공보부장관상 2회 수상"
+    - "2013 대한민국 미술인의 날 본상 수상"
+  public_works:
+    - "대한항공 여객기 피격 희생자 위령탑 (천안 망향의 동산)"
+    - "괌 대한항공 여객기 희생자 위령탑 (풍산공원)"
+    - "인하대학교 비룡탑"
+    - "김환태 문학기념비"

@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="{{ site.baseurl }}/"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#footer">About&nbsp;&nbsp;<i class="fa fa-info-circle text-fg"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main: gallery of works -->
+    <div id="main">
+        {% for w in site.data.works %}
+        <article class="thumb">
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ w.image }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ w.image }}" alt="{{ w.title_ko }} {{ w.title_en }}"/></a>
+            <h2>{{ w.title_ko }} <span class="en">{{ w.title_en }}</span></h2>
+            <p>{{ w.material_ko }} · {{ w.dimensions }} · {{ w.year }}</p>
+        </article>
+        {% endfor %}
+    </div>
+
+    <!-- Footer: About / Biography -->
+    <footer id="footer" class="panel">
+        <div class="inner split">
+            <div>
+                <section>
+                    <h2>{{ site.artist.name_ko }} <span class="en">{{ site.artist.name_en }}</span></h2>
+                    <p class="lead">{{ site.artist.years }} · {{ site.artist.role_ko }}</p>
+                    <p>{{ site.artist.bio_ko }}</p>
+                    <p>{{ site.artist.bio_en }}</p>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <h2>약력 · Career</h2>
+                    <ul class="alt">
+                        {% for item in site.artist.career %}<li>{{ item }}</li>{% endfor %}
+                    </ul>
+                </section>
+                <section>
+                    <h2>주요 공공조각 · Public Works</h2>
+                    <ul class="alt">
+                        {% for item in site.artist.public_works %}<li>{{ item }}</li>{% endfor %}
+                    </ul>
+                </section>
+                <p class="copyright">
+                    &copy; {{ site.time | date: '%Y' }} {{ site.artist.name_ko }} ({{ site.artist.name_en }}). In loving memory.
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>

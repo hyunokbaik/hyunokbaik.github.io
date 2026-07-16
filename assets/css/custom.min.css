@@ -1,0 +1,12 @@
+.text-fg{color:#a0a0a1}#footer .presentify{margin:0 0 1.4em 0;display:grid;grid-template-columns:auto 1fr;column-gap:1rem;align-items:center}#footer .presentify .presentify-logo{display:flex;align-items:center;justify-content:center}#footer .presentify .presentify-logo a{display:flex;align-items:center;justify-content:center;border:0}#footer .presentify .presentify-logo img{width:72px;height:72px;display:block}#footer .presentify .presentify-text{margin:0}
+/* ===== Baik Hyun-ok sculpture site ===== */
+body,input,select,textarea,#header h1,.thumb>h2,#footer,h1,h2,h3{font-family:"Noto Sans KR","Source Sans Pro",-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif}
+.thumb>h2{font-size:.9em;font-weight:500}
+.thumb>h2 .en{font-weight:300;opacity:.75;font-size:.82em;margin-left:.35em}
+#footer .en{font-weight:300;opacity:.7;font-size:.82em}
+#footer .lead{color:#a0a0a1;margin:-.4em 0 1.1em;font-weight:300}
+#footer section h2{font-size:1.05em;letter-spacing:.05em;font-weight:500}
+#footer ul.alt li{font-size:.92em;line-height:1.5}
+#footer p{line-height:1.75}
+.poptrox-popup .work-caption h3{margin:0 0 .3em;font-size:1em;font-weight:500;color:#fff}
+.poptrox-popup .work-caption p{margin:0;font-size:.85em;color:rgba(255,255,255,.8)}
